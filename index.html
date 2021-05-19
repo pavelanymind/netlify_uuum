@@ -17,7 +17,12 @@
     window.onload = init;
 
     function init() {
-        document.getElementById('myFrame').src = "https://stg-app.any-creator.com";
+        const src = document.getElementById("myFrame").contentWindow.location.href;
+        console.log('src: ', src);
+        if (!src) {
+            document.getElementById("myFrame").src = "https://stg-app.any-creator.com";
+        }
+        
     }
 </script>
 
