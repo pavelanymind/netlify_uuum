@@ -19,7 +19,7 @@
     function init() {
         const src = document.getElementById("myFrame").contentWindow.location.href;
         console.log('src: ', src);
-        if (!src) {
+        if (src == 'about:blank') {
             document.getElementById("myFrame").src = "https://stg-app.any-creator.com";
         }
         
