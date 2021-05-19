@@ -10,13 +10,14 @@
 
 <body>
     <div style="width:100%;height:100vh">
-        <iframe id="myFrame" title="test" height="95%" width="95%"></iframe>
+        <iframe id="myFrame" title="test" onload="init()" height="95%" width="95%"></iframe>
     </div>
 </body>
 <script>
-    document.frames["test"].onload = function () {
-        console.log('dfdf');
-        document.getElementById('myFrame').setAttribute('src', 'https://stg-app.any-creator.com');
+    window.onload = init;
+
+    function init() {
+        document.getElementById('myFrame').src = "https://stg-app.any-creator.com'";
     }
 </script>
 
